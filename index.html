@@ -19,15 +19,15 @@
 				  width: 100%;
 				  height: 100%;
 				  display: block;
-				  background-image: url(yaron_color.jpg);
 				  opacity: 0.5;
-				  -webkit-background-size: cover;
-					background-size: cover;
-					-webkit-filter: blur(10px);
-					   -moz-filter: blur(10px);
-					   	 -o-filter: blur(10px);
-					    -ms-filter: blur(10px);
-					  	 	  filter: blur(10px);
+				  background-image: url(yaron_color.jpg);
+			    -moz-background-size:cover;
+			         background-size:cover;
+					-webkit-filter: blur(20px);
+					   -moz-filter: blur(20px);
+					   	 -o-filter: blur(20px);
+					    -ms-filter: blur(20px);
+					  	 	  filter: blur(20px);
 				}
 				h1 {
 					width: 100%;
@@ -42,13 +42,14 @@
 					position: absolute;
 				  left: 50%;
 				  top: 50%;
-				  transform: translate(-50%, -50%);
 					width: 30em;
 					max-width: 90%;
 					margin: 0;
 					padding: 0;
 					border: 10px solid #fff;
 					box-shadow: 0 0 50px rgba(0,0,0,0.4);
+					-webkit-transform: translate(-50%, -50%);
+								  transform: translate(-50%, -50%);
 					-webkit-animation: fadein 2s; /* Safari and Chrome */
 			       -moz-animation: fadein 2s; /* Firefox */
 			        -ms-animation: fadein 2s; /* Internet Explorer */
@@ -104,6 +105,15 @@
 				    from { opacity: 0; }
 				    to   { opacity: 1; }
 				}​
+				@media screen and (max-width: 480px) {
+					body {
+						background: url(blur.jpg);
+					}
+				    figure {
+				        width: 90%;
+				    }
+				}
+
 			</style>
 	</head>
 	<body>

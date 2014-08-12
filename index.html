@@ -3,8 +3,10 @@
 	<head>
 			<meta charset="utf-8">
 			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			  <meta name="viewport" content="width=device-width, initial-scale=1">
 			<title>Someone to hear your prayers, someone who cares, Yaron Personal Jesus</title>
 			<style>
+
 				body {
 					margin: 0;
 					padding: 2em;
@@ -46,15 +48,10 @@
 					max-width: 90%;
 					margin: 0;
 					padding: 0;
-					border: 10px solid #fff;
+					border: 0.7em solid #fff;
 					box-shadow: 0 0 50px rgba(0,0,0,0.4);
 					-webkit-transform: translate(-50%, -50%);
 								  transform: translate(-50%, -50%);
-					-webkit-animation: fadein 2s; /* Safari and Chrome */
-			       -moz-animation: fadein 2s; /* Firefox */
-			        -ms-animation: fadein 2s; /* Internet Explorer */
-			         -o-animation: fadein 2s; /* Opera */
-			            animation: fadein 2s;
 				}
 				figcaption {
 					position: absolute;
@@ -63,10 +60,11 @@
 					width: 100%;
 					color: #000;
 					font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
-					font-size: 2em;
 					text-transform: uppercase;
 					font-style: italic;
 					font-size: 2em;
+				}
+				figure, figcaption {
 					-webkit-animation: fadein 2s; /* Safari and Chrome */
 			       -moz-animation: fadein 2s; /* Firefox */
 			        -ms-animation: fadein 2s; /* Internet Explorer */
@@ -77,52 +75,59 @@
 					display: block;
 					max-width: 100%;
 				}
-				@keyframes fadein {
-				    from { opacity: 0; }
-				    to   { opacity: 1; }
+				/* Aspect ratios for media objects i.e canvas, iframe, video, svg etc */
+				.aspect-ratio:before {
+				  content: "";
+				  display: block;
+				  padding-top: 100%; /* initial ratio of 1:1*/
+				}
+				.aspect-ratio--object{
+				  position:  absolute;
+				  top: 0;
+				  left: 0;
+				  bottom: 0;
+				  right: 0;
+				  height: 100%;
+				  width: 100%;
 				}
 
-				/* Firefox */
-				@-moz-keyframes fadein {
-				    from { opacity: 0; }
-				    to   { opacity: 1; }
-				}
-
-				/* Safari and Chrome */
-				@-webkit-keyframes fadein {
-				    from { opacity: 0; }
-				    to   { opacity: 1; }
-				}
-
-				/* Internet Explorer */
-				@-ms-keyframes fadein {
-				    from { opacity: 0; }
-				    to   { opacity: 1; }
-				}​
-
-				/* Opera */
-				@-o-keyframes fadein {
-				    from { opacity: 0; }
-				    to   { opacity: 1; }
-				}​
-				@media screen and (max-width: 480px) {
-					body {
-						background: url(blur.jpg);
+				@media all and (max-width: 35em) {
+					figure {
+						width: 80%;
+						border-width: 0.5em;
 					}
-				    figure {
-				        width: 90%;
-				    }
+					figcaption {
+						font-size: 1.7em;
+					}
 				}
-
+				@media all and (max-width: 30em) {
+					figure {
+						width: 80%;
+						border-width: 0.4em;
+					}
+					figcaption {
+						font-size: 1.2em;
+					}
+				}
+				@media only screen and (orientation : landscape) and (max-device-width : 480px) {
+					figure {
+						height: 80%;
+						width: 45%;
+					}
+					figcaption {
+						font-size: 1.2em;
+					}
+				}
 			</style>
 	</head>
 	<body>
 	<div class="wrapper">
 		<h1>Yaron personal Jesus</h1>
-		<figure>
-			<img src="yaron_color.jpg" alt="">
+		<figure class="aspect-ratio">
+			<img src="yaron_color.jpg" alt="Yaron Schoen folding his arms. Photo by Maykel Loomans." class="aspect-ratio--object">
 			<figcaption>Yaron personal Jesus</figcaption>
 		</figure>
 	</div>
+<!-- This photo was takend by Maykel Loomans, who graciously gave me permission to use it, and can be seen at https://www.flickr.com/photos/miekd/10397904764/in/photolist-9fSfq7-9rbTAX-gQPYQ5-dxcFcr-dkzYLv-ahN4ek-7Rp2LC-7DkKbn-7xxZXP-8Mnk8w-gumbms-apDgRc-9tL4QZ-7T9XVV-apDgN4-aB6Kqu-bwBwBV-7t4ES4-gumZww-gun7hL-fapfmo -->
 	</body>
 </html>

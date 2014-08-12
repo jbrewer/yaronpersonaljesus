@@ -5,8 +5,6 @@
 			<meta http-equiv="X-UA-Compatible" content="IE=edge">
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 			<title>Someone to hear your prayers, someone who cares, Yaron Personal Jesus</title>
-			<script type="text/javascript" src="//use.typekit.net/pbf4tiv.js"></script>
-			<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 			<style>
 
 				body {
@@ -23,15 +21,10 @@
 				  width: 100%;
 				  height: 100%;
 				  display: block;
-				  opacity: 0.5;
-				  background-image: url(yaron_color.jpg);
+				  opacity: 0.75;
+				  background-image: url(yaron_blur.jpg);
 			    -moz-background-size:cover;
 			         background-size:cover;
-					-webkit-filter: blur(20px);
-					   -moz-filter: blur(20px);
-					   	 -o-filter: blur(20px);
-					    -ms-filter: blur(20px);
-					  	 	  filter: blur(20px);
 				}
 
 				.photo {
@@ -61,21 +54,14 @@
 					font-style: italic;
 					font-weight: 400;
 					font-size: 2em;
+					text-indent: 100%;
+					white-space: nowrap;
+					overflow: hidden;
+					background: url(ypj.png) no-repeat;
+					background-size: contain;
+					width: 86%;
+					margin: 0 7%;
 				}
-
-/*				h1 {
-					position: absolute;
-					top: 1em;
-					text-align: center;
-					width: 100%;
-					color: rgba(12,48,62,0.8);
-					margin: 0;
-					padding: 0;
-					font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-					text-transform: uppercase;
-					font-weight: 900;
-					font-size: 2em;
-				}*/
 				.photo, h1 {
 					-webkit-animation: fadein 2s; /* Safari and Chrome */
 			       -moz-animation: fadein 2s; /* Firefox */
@@ -87,7 +73,7 @@
 					display: block;
 					max-width: 100%;
 				}
-				.soundcloud {
+				#soundcloud {
 					display: none;
 				}
 				/* Aspect ratios for media objects i.e canvas, iframe, video, svg etc */
@@ -142,7 +128,14 @@
 			<h1>Yaron personal Jesus</h1>
 		</div>
 	</div>
-	<div class="soundcloud"><iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/162748477&amp;color=ff5500&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe></div>
-<!-- This photo was takend by Maykel Loomans, who graciously gave me permission to use it, and can be seen at https://www.flickr.com/photos/miekd/10397904764/in/photolist-9fSfq7-9rbTAX-gQPYQ5-dxcFcr-dkzYLv-ahN4ek-7Rp2LC-7DkKbn-7xxZXP-8Mnk8w-gumbms-apDgRc-9tL4QZ-7T9XVV-apDgN4-aB6Kqu-bwBwBV-7t4ES4-gumZww-gun7hL-fapfmo -->
+	<div id="soundcloud"></div>
+	<!-- This photo was takend by Maykel Loomans, who graciously gave me permission to use it, and can be seen at https://www.flickr.com/photos/miekd/10397904764/in/photolist-9fSfq7-9rbTAX-gQPYQ5-dxcFcr-dkzYLv-ahN4ek-7Rp2LC-7DkKbn-7xxZXP-8Mnk8w-gumbms-apDgRc-9tL4QZ-7T9XVV-apDgN4-aB6Kqu-bwBwBV-7t4ES4-gumZww-gun7hL-fapfmo -->
+	<script>
+		if (document.documentElement.clientWidth > 640) {
+			player = '<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/162748477&amp;color=ff5500&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>';
+			soundcloud = document.getElementById('soundcloud').innerHTML += player;
+		}
+	</script>
+
 	</body>
 </html>
